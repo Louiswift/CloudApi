@@ -28,7 +28,10 @@ const chooseUserAgent = (ua = false) => {
 }
 const createRequest = (method, url, data = {}, options) => {
   return new Promise((resolve, reject) => {
-    let headers = { 'User-Agent': chooseUserAgent(options.ua) }
+    let headers = { 'User-Agent': chooseUserAgent(options.ua),
+    'User-Agent': chooseUserAgent(options.ua),
+    'Access-Control-Allow-Origin': 'cloud-api-omega.vercel.app',
+  }
     options.headers = options.headers || {}
     headers = {
       ...headers,

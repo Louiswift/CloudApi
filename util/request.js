@@ -30,7 +30,7 @@ const createRequest = (method, url, data = {}, options) => {
   return new Promise((resolve, reject) => {
     let headers = { 'User-Agent': chooseUserAgent(options.ua),
     'User-Agent': chooseUserAgent(options.ua),
-    'Access-Control-Allow-Origin': 'cloud-api-omega.vercel.app',
+    'Access-Control-Allow-Origin': 'henrywang.xyz',
   }
     options.headers = options.headers || {}
     headers = {

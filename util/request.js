@@ -30,7 +30,7 @@ const createRequest = (method, url, data = {}, options) => {
   return new Promise((resolve, reject) => {
     let headers = { 'User-Agent': chooseUserAgent(options.ua),
     'User-Agent': chooseUserAgent(options.ua),
-    'Access-Control-Allow-Origin': 'henrywang.xyz',
+    'Access-Control-Allow-Origin': 'www.henrywang.xyz',
   }
     options.headers = options.headers || {}
     headers = {

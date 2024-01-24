@@ -145,9 +145,10 @@ async function consturctServer(moduleDefs) {
         'Access-Control-Allow-Credentials': true,
         'Access-Control-Allow-Origin':
           CORS_ALLOW_ORIGIN || req.headers.origin || '*',
-        'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type',
+        'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type,Authorization,credentials',
         'Access-Control-Allow-Methods': 'PUT,POST,GET,DELETE,OPTIONS',
-        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+        'Access-Control-Allow-Credentials': true
       })
     }
     req.method === 'OPTIONS' ? res.status(204).end() : next()
